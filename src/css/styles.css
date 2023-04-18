@@ -1,3 +1,19 @@
 body {
-  background-color: lightblue;
+  background-color: #AFBE8F;
 } 
+
+.consonants {
+  width: 2rem;
+  text-align: center;
+  background-color: #bfcde09b;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid black;
+  box-shadow: 2px 2px 2px #5977a2;
+  margin: 5px;
+}
+
+.vowels {
+  margin: 0px 5px;
+}

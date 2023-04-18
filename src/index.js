@@ -21,38 +21,20 @@ function printDino(dino) {
   let dinoArray = dino[0][0].toUpperCase().split("");
   console.log(dinoArray);
   const regex = /[AEIUO]/;
+  let form = document.getElementById("form");
   for (let i = 0; i < dinoArray.length; i++) {
     if (regex.test(dinoArray[i])) {
-      let div = document.getElementById("letters");
-      let span = document.createElement("p");
-      span.setAttribute("class", "letters");
+      let span = document.createElement("span");
+      span.setAttribute("class", "vowels");
       span.innerText = dinoArray[i];
-      div.append(span);
-    } else {
-      let form = document.getElementById("form");
+      form.append(span);
+    } else {      
       let input = document.createElement("input");
-      input.setAttribute("class", "letters");
-      input.setAttribute("placeholder", dinoArray[i]);
+      input.setAttribute("class", "consonants");
+      input.setAttribute("style", "text-transform:uppercase");
       form.append(input);
     }
   }
-
-  //   dinoArray.forEach((element) => {
-  //     if() {
-  //       console.log(typeof element);
-  //       let form = document.getElementById("form");
-  //       let input = document.createElement("input");
-  //       input.setAttribute("class", "letters");
-  //       input.setAttribute("placeholder", element)
-  //       form.append(input);
-  //     }else {
-  // let div = document.getElementById("letters");
-  // let span = document.createElement("span");
-  // span.setAttribute("class", "letters");
-  // div.append(span);
-  //     }
-  //   });
-  //   console.log(dinoArray);
 }
 
 function printError(errorDino) {
